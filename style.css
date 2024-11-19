@@ -1,0 +1,250 @@
+:root {
+    --clr-100: #FFFEF8;
+    --clr-200: #FDDA78;
+    --clr-300: #FCD058;
+    --clr-400: #31312F;
+    --clr-500: #252524;
+    --clr-550: rgba(37, 37, 36, .25);
+    --border-radius: 1.8em;
+}
+
+/* general set up */
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background-color: var(--clr-300);
+    color: var(--clr-500);
+
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.btn {
+    width: 100%;
+    border-radius: .6em;
+    border: 3px solid transparent;
+    font-weight: 700;
+}
+
+.container {
+    background-color: var(--clr-100);
+    box-shadow: .5em .5em var(--clr-500);
+    border: .05em solid var(--clr-500);
+    border-radius: var(--border-radius);
+
+    width: 90%;
+    max-width: 550px;
+    margin: 1em auto;
+}
+
+/* intro page */
+
+.intro-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 85%;
+    margin: 2em auto;
+}
+
+.intro__title {
+    margin: 0;
+    font-family: 'Abril Fatface', serif;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.intro__img {
+    width: 75%;
+    margin: 1em auto;
+}
+
+.intro__pre-heading-container {
+    margin-bottom: .6em;
+}
+
+.intro__pre-heading {
+    display: block;
+    font-style: italic;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.intro__btn {
+    max-width: 400px;
+    padding: .9em;
+    margin: .5em auto 0;
+    font-size: 1.15em;
+    font-weight: 900;
+}
+
+/* trip page */
+
+.trip-container {
+    display: none;
+    width: 85%;
+    margin: 2em auto;
+}
+
+.trip {
+    display: flex;
+    flex-direction: column;
+}
+
+.trip__img {
+    border-radius: var(--border-radius);
+}
+
+.trip__intro {
+    margin-top: 1em;
+    font-size: .9em;
+}
+
+.trip__title {
+    margin: .05em 0 .25em;
+    font-size: 2.5em;
+    font-weight: 800;
+}
+
+.trip__text {
+    margin: 0;
+    line-height: 1.5;
+    font-size: .9em;
+    font-weight: 300;
+}
+
+.trip__btn-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: .5em;
+    margin-top: 1.3em;
+}
+
+.trip__btn {
+    padding: 1.2em 0;
+    font-size: .9rem;
+    font-weight: 700;
+}
+
+/* loading screen */
+
+.loading-container {
+    display: none;
+    flex-direction: column;
+    grid-template-rows: 1fr 2fr;
+    grid-gap: 2em;
+    width: 80%;
+    max-width: 650px;
+    min-height: 60vh;
+    margin: 4em auto;
+
+}
+
+.loading-message {
+    margin: auto;
+    font-family: 'Abril Fatface', serif;
+    font-size: 1.4em;
+}
+
+.loading-gif {
+    display: block;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+/* button styling */
+
+.btn:hover {
+    cursor: pointer;
+}
+
+.light--btn {
+    background-color: var(--clr-300);
+    color: var(--clr-500);
+}
+
+.light--btn:hover,
+.light--btn:focus {
+    background-color: var(--clr-200);
+}
+
+.light--btn:active {
+    border-color: var(--clr-500);
+
+    transition: .5s;
+}
+
+.dark--btn {
+    background-color: var(--clr-500);
+    color: var(--clr-100);
+}
+
+.dark--btn:hover,
+.dark--btn:focus {
+    background-color: var(--clr-400);
+}
+
+.dark--btn:active {
+    border-color: var(--clr-200);
+
+    transition: .5s;
+}
+
+/* media queries */
+
+@media (min-width: 500px) {
+    html {
+        font-size: 1.1rem;
+    }
+
+    .trip__btn-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .trip__btn {
+        width: 49%;
+    }
+
+    .intro__pre-heading {
+        display: inline;
+    }
+}
+
+@media (min-width: 1200px) {
+    html {
+        font-size: 1.2rem;
+    }
+
+    .container {
+        margin: 1.5em auto 1em;
+    }
+
+}
+
+@media (min-width: 1900px) {
+    html {
+        font-size: 1.3rem;
+    }
+
+    .container {
+        margin: 5em auto 1em;
+    }
+
+}
